@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Elemento</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="contenedor">
+  <h1 id="nombre"></h1>
+
+  <div class="info">
+    <p><strong>Número atómico:</strong> <span id="numero"></span></p>
+    <p><strong>Masa atómica:</strong> <span id="masa"></span></p>
+    <p><strong>Electrones de valencia:</strong> <span id="valencia"></span></p>
+    <p><strong>Diagrama de Lewis:</strong></p>
+    <pre id="lewis"></pre>
+  </div>
+
+  <div class="video">
+    <iframe id="video" width="560" height="315"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <a href="index.html" class="volver">⬅ Volver</a>
+</div>
+
+<div class="marca">
+  Hecha por Iktan Edahi Vejar Trejo <br>
+  Escuela Secundaria Técnica 24
+</div>
+
+<script src="data.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  const elemento = elementos[id];
+
+  if (elemento) {
+    document.getElementById("nombre").innerText = elemento.nombre;
+    document.getElementById("numero").innerText = elemento.numero;
+    document.getElementById("masa").innerText = elemento.masa;
+    document.getElementById("valencia").innerText = elemento.valencia;
+    document.getElementById("lewis").innerText = elemento.lewis;
+    document.getElementById("video").src = elemento.video;
+  }
+</script>
+
+</body>
+</html>
