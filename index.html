@@ -1,34 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Tabla Periódica Interactiva</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Prueba Netlify</title>
 </head>
-<body>
+<body style="background-color:#111; color:white; text-align:center; font-family:Arial;">
 
-<h1>Tabla Periódica Interactiva</h1>
-<p>Escanea el código QR o selecciona un elemento</p>
-
-<div class="grid" id="tabla"></div>
-
-<footer>
-  Hecha por Iktan Edahi Vejar Trejo <br>
-  Escuela Secundaria Técnica 24
-</footer>
-
-<script src="data.js"></script>
-<script>
-  const tabla = document.getElementById("tabla");
-
-  for (let i = 1; i <= 118; i++) {
-    const btn = document.createElement("a");
-    btn.href = `elemento.html?id=${i}`;
-    btn.className = "elemento";
-    btn.innerText = i;
-    tabla.appendChild(btn);
-  }
-</script>
+  <h1>🔥 FUNCIONA 🔥</h1>
+  <p>Si estás viendo esto, Netlify ya no te odia.</p>
+  <button onclick="alert('El HTML sí funciona 😎')">
+    Haz clic
+  </button>
 
 </body>
 </html>
